@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::view('product','products');
+Route::view('product','products')->name('product');
 
 
 Route::middleware([
