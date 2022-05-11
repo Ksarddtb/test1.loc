@@ -11,7 +11,7 @@ class Product extends Model
     use HasFactory,SoftDeletes;
 
     protected $casts=[
-        'data'=>'array'
+        'data'=>'json'
     ];
     protected $fillable=['name','article','status','data'];
 

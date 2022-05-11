@@ -14,6 +14,9 @@
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{asset('assets/css/dashlite.css?ver=2.2.0')}}">
     <link id="skin-default" rel="stylesheet" href="{{asset('assets/css/theme.css?ver=2.2.0')}}">
+    {{-- <link rel="stylesheet" href="{{ mix('css/app.css') }}"> --}}
+    {{-- <script src="{{ mix('js/app.js') }}" defer></script> --}}
+    @livewireStyles
 </head>
 
 <body class="nk-body bg-lighter npc-general has-sidebar ">
@@ -34,7 +37,7 @@
                     <div class="container-fluid">
                         <div class="nk-content-inner">
                             <div class="nk-content-body">
-                                <p>Starter page for general layout.</p>
+                                @yield('content')
                             </div>
                         </div>
                     </div>
@@ -63,9 +66,10 @@
         <!-- main @e -->
     </div>
     <!-- app-root @e -->
+    @livewireScripts
     <!-- JavaScript -->
-    <script src="{{asset('assets/js/bundle.js?ver=2.2.0')}}"></script>
-    <script src="{{asset('assets/js/scripts.js?ver=2.2.0')}}"></script>
+    {{-- <script src="{{asset('assets/js/bundle.js?ver=2.2.0')}}"></script> --}}
+    {{-- <script src="{{asset('assets/js/scripts.js?ver=2.2.0')}}"></script> --}}
 </body>
 
 </html>
