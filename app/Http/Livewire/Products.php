@@ -3,6 +3,8 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Notifications\ProductNotif;
+use Illuminate\Notifications\Notification;
 
 class Products extends Component
 {
@@ -49,6 +51,15 @@ class Products extends Component
         $this->product->save();
         $this->ModalUp=false;
         $this->ProductEdit=false;
+        $NotifDate=[
+            'email'=>config('product.email'),
+            'body'=>'test message',
+            'notifText'=>'Test text',
+            'url'=>url('/'),
+            'thankyou'=>'спасибо',
+        ];
+        $send=new ProductNotif($NotifDate);
+        // Notification::notify(new ProductNotif($NotifDate));
     }
     public function delete()
     {
@@ -56,4 +67,5 @@ class Products extends Component
         $this->ModalUp=false;
         $this->ProductEdit=false;
     }
+
 }

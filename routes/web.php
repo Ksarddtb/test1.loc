@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('product',[ProductController::class,'index'])->name('product');
+Route::get('notification',[ProductController::class,'notif'])->name('product.notif');
 
 
 Route::middleware([
