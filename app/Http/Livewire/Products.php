@@ -50,4 +50,10 @@ class Products extends Component
         $this->ModalUp=false;
         $this->ProductEdit=false;
     }
+    public function delete()
+    {
+        $this->product->delete();
+        $this->ModalUp=false;
+        $this->ProductEdit=false;
+    }
 }

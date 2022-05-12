@@ -39,7 +39,7 @@
                     <h4 class="modal-title" id="myModalLabel1">Добавление/Изменение/Удаление </h4>
                     @if(config('product.role')=='Admin')
                     <button type="button" class="btn btn-success" wire:click='EditProduct'><i class="icon ni ni-pen2"></i></button>
-                    <button type="button" class="btn btn-danger"><i class="icon ni ni-trash"></i></button>
+                    <button type="button" class="btn btn-danger" wire:click='delete'><i class="icon ni ni-trash"></i></button>
                     @endif
                     <button type="button" class="close" wire:click='closeModal'>
                         <span aria-hidden="true">x</span>
