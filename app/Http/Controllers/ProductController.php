@@ -13,15 +13,4 @@ class ProductController extends Controller
     {
         return view('products');
     }
-    public function notif()
-    {
-        $User=User::first();
-        $NotifDate=[
-            'body'=>'test message',
-            'notifText'=>'Test text',
-            'url'=>url('/'),
-            'thankyou'=>'спасибо',
-        ];
-        // $notif=new ProductNotif($NotifDate));
-    }
 }
